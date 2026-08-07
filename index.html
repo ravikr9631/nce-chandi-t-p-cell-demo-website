@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nalanda College of Engineering, Chandi | Training & Placement Cell</title>
+
+<!-- Google Fonts & Font Awesome Icons -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+:root {
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --secondary: #0f172a;
+    --accent: #f59e0b;
+    --accent-hover: #d97706;
+    --bg-light: #f8fafc;
+    --surface: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --radius: 12px;
+    --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- Header & Navbar --- */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    object-fit: cover;
+}
+
+.logo-text h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+}
+
+.logo-text p {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.nav-btns {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* Button UI System */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #0f172a;
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-large {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+    background: var(--primary);
+    color: #ffffff;
+    box-shadow: var(--shadow-md);
+}
+
+.btn-large:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* --- Hero Section --- */
+.hero {
+    position: relative;
+    padding: 8rem 2rem 6rem;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.88) 100%),
+                url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 1rem;
+    background: rgba(245, 158, 11, 0.15);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    border-radius: 9999px;
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    max-width: 900px;
+    margin-bottom: 1.25rem;
+}
+
+.hero p {
+    font-size: 1.125rem;
+    color: #cbd5e1;
+    max-width: 650px;
+    margin-bottom: 2rem;
+}
+
+.hero-ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* --- Stats Banner --- */
+.stats-bar {
+    max-width: 1100px;
+    margin: -3rem auto 0;
+    position: relative;
+    z-index: 10;
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1;
+}
+
+.stat-item p {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* --- Content Sections --- */
+.section {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: var(--secondary);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+}
+
+.section-header p {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+/* Custom About Cards Grid */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.about-card {
+    background: var(--surface);
+    padding: 2rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.about-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(37, 99, 235, 0.3);
+}
+
+.about-card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.about-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 0.75rem;
+}
+
+.about-card p {
+    color: var(--text-muted);
+    font-size: 0.925rem;
+    line-height: 1.6;
+}
+
+.about-highlights {
+    list-style: none;
+    margin-top: 0.75rem;
+}
+
+.about-highlights li {
+    font-size: 0.875rem;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.about-highlights li i {
+    color: var(--primary);
+    font-size: 0.8rem;
+}
+
+/* Cards Grid for Services & Companies */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: var(--surface);
+    padding: 2rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(37, 99, 235, 0.2);
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.925rem;
+    line-height: 1.5;
+}
+
+.company-card {
+    align-items: center;
+    text-align: center;
+}
+
+.company-badge {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: var(--secondary);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border);
+}
+
+/* Redirect Section */
+.more-info-section {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #ffffff;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+/* Contact Box */
+.contact-container {
+    background: var(--surface);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    max-width: 950px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-info {
+    padding: 3rem 2.5rem;
+}
+
+.contact-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-item i {
+    color: var(--primary);
+    font-size: 1.25rem;
+    margin-top: 0.25rem;
+}
+
+.contact-item h4 {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.contact-item p {
+    font-size: 0.95rem;
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.contact-cta {
+    background: var(--secondary);
+    color: white;
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-cta h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-cta p {
+    color: #94a3b8;
+    margin-bottom: 2rem;
+    font-size: 0.925rem;
+}
+
+/* Modals */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background: var(--surface);
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--border);
+    position: relative;
+    transform: scale(0.95);
+    transition: transform 0.2s ease;
+}
+
+.modal.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.modal-header h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+.close-modal {
+    background: transparent;
+    border: none;
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.close-modal:hover {
+    color: var(--secondary);
+    background: #f1f5f9;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--secondary);
+    margin-bottom: 0.35rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: var(--transition);
+}
+
+.form-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.modal-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.option-btn {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-weight: 600;
+    color: var(--secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: var(--transition);
+}
+
+.option-btn:hover {
+    background: #f1f5f9;
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+/* --- Footer --- */
+.footer {
+    background: var(--secondary);
+    color: #94a3b8;
+    padding: 3rem 2rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.social-links {
+    display: flex;
+    gap: 1.25rem;
+    font-size: 1.35rem;
+}
+
+.social-links a {
+    color: #94a3b8;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    max-width: 1280px;
+    margin: 1.5rem auto 0;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+    .hero {
+        padding: 5rem 1rem 4rem;
+    }
+    .stats-bar {
+        margin: -2rem 1rem 0;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    .contact-info, .contact-cta {
+        padding: 2rem 1.5rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Header Navbar -->
+<header class="header">
+    <nav class="navbar">
+        <a href="#" class="logo">
+            <img src="logo.jpg" alt="NCE Logo" onerror="this.onerror=null; this.src='https://via.placeholder.com/46?text=NCE';">
+            <div class="logo-text">
+                <h2>Nalanda College of Engineering</h2>
+                <p>Training & Placement Cell • Chandi</p>
+            </div>
+        </a>
+
+        <div class="nav-btns">
+            <button class="btn btn-outline" onclick="openChoice()"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
+            <button class="btn btn-primary" onclick="openSignup()"><i class="fa-solid fa-user-plus"></i> Register</button>
+        </div>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-badge">
+        <i class="fa-solid fa-graduation-cap"></i> Official Placement Portal
+    </div>
+    <h1>Nalanda College of Engineering, Chandi</h1>
+    <p>Empowering Bihar's next-generation engineers. Connecting talent, recruiters, and career opportunities under one digital portal.</p>
+    <div class="hero-ctas">
+        <button class="btn btn-primary" onclick="openChoice()"><i class="fa-solid fa-rocket"></i> Access Portal</button>
+        <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-envelope"></i> Contact TPO</a>
+    </div>
+</section>
+
+<!-- Stats Bar -->
+<div class="stats-bar">
+    <div class="stat-item">
+        <h3>50+</h3>
+        <p>Students Placed</p>
+    </div>
+    <div class="stat-item">
+        <h3>12 LPA</h3>
+        <p>Highest Package</p>
+    </div>
+    <div class="stat-item">
+        <h3>5 LPA</h3>
+        <p>Average Package</p>
+    </div>
+    <div class="stat-item">
+        <h3>20+</h3>
+        <p>Recruiting Partners</p>
+    </div>
+</div>
+
+<!-- About Section -->
+<section class="section">
+    <div class="section-header">
+        <h2>About Nalanda College of Engineering, Chandi</h2>
+        <p>A leading government technical institution established by the Department of Science, Technology and Technical Education, Government of Bihar.</p>
+    </div>
+
+    <div class="about-grid">
+        <div class="about-card">
+            <div class="about-card-icon"><i class="fa-solid fa-landmark"></i></div>
+            <h3>Inauguration & Legacy</h3>
+            <p>Founded on 19th November 2008 by Honorable Chief Minister Sri Nitish Kumar, restoring the historic academic legacy of ancient Nalanda through modern technical learning.</p>
+        </div>
+
+        <div class="about-card">
+            <div class="about-card-icon"><i class="fa-solid fa-certificate"></i></div>
+            <h3>Affiliation & Approval</h3>
+            <p>Approved by AICTE (New Delhi) and affiliated with Bihar Engineering University (BEU), Patna, ensuring industry-aligned technical curricula.</p>
+        </div>
+
+        <div class="about-card">
+            <div class="about-card-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <h3>Key Academic Branches</h3>
+            <ul class="about-highlights">
+                <li><i class="fa-solid fa-circle-check"></i> Computer Science & Engineering</li>
+                <li><i class="fa-solid fa-circle-check"></i> Civil Engineering</li>
+                <li><i class="fa-solid fa-circle-check"></i> Electrical & Electronics Engineering</li>
+                <li><i class="fa-solid fa-circle-check"></i> Mechanical Engineering</li>
+                <li><i class="fa-solid fa-circle-check"></i> Aeronautical Engineering</li>
+            </ul>
+        </div>
+
+        <div class="about-card">
+            <div class="about-card-icon"><i class="fa-solid fa-microchip"></i></div>
+            <h3>Campus & Innovations</h3>
+            <p>Spanning a modern campus in Chandi equipped with high-tech laboratories, state-of-the-art incubation centres, central library, and active GATE preparation cells.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="section" style="background-color: #f1f5f9;">
+    <div class="section-header">
+        <h2>Our Portal Services</h2>
+        <p>Comprehensive placement solutions designed for students, recruiters, and administrative coordinators.</p>
+    </div>
+    
+    <div class="cards-grid">
+        <div class="card">
+            <div class="card-icon"><i class="fa-solid fa-user-graduate"></i></div>
+            <h3>Student Dashboard</h3>
+            <p>Track job applications, manage resumes, and view interview notifications seamlessly.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon"><i class="fa-solid fa-briefcase"></i></div>
+            <h3>Recruiter Portal</h3>
+            <p>Companies can post job openings, manage drive schedules, and shortlist candidates directly.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>Placement Tracking</h3>
+            <p>Real-time analytics and statistics on branch-wise recruitment drives and offer rollouts.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon"><i class="fa-solid fa-bell"></i></div>
+            <h3>Live Announcements</h3>
+            <p>Instant alerts for campus drives, pre-placement talks, and industrial training workshops.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Recruiters Grid -->
+<section class="section">
+    <div class="section-header">
+        <h2>Top Hiring Partners</h2>
+        <p>Leading enterprises recruiting talent from Nalanda College of Engineering, Chandi.</p>
+    </div>
+
+    <div class="cards-grid">
+        <div class="card company-card">
+            <div class="company-badge">TCS</div>
+            <h3>Tata Consultancy Services</h3>
+            <p>IT & Software Engineering</p>
+        </div>
+
+        <div class="card company-card">
+            <div class="company-badge">INF</div>
+            <h3>Infosys</h3>
+            <p>Digital Consulting & Tech</p>
+        </div>
+
+        <div class="card company-card">
+            <div class="company-badge">WIP</div>
+            <h3>Wipro</h3>
+            <p>Information Technology</p>
+        </div>
+
+        <div class="card company-card">
+            <div class="company-badge">ACC</div>
+            <h3>Accenture</h3>
+            <p>Technology & Operations</p>
+        </div>
+    </div>
+</section>
+
+<!-- More Info Redirect Button Section (Above Contact & Below Company) -->
+<section class="more-info-section">
+    <a href="details.html" class="btn btn-large">
+        <i class="fa-solid fa-circle-info"></i> More Information About All
+    </a>
+</section>
+
+<!-- Contact Us -->
+<section id="contact" class="section">
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Contact T&P Cell</h2>
+            <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.925rem;">Reach out to our placement officers for partnerships or campus drive schedules.</p>
+            
+            <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                    <h4>Address</h4>
+                    <p>Nalanda College of Engineering, Chandi, Nalanda, Bihar - 803108</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                    <h4>Email</h4>
+                    <p>tpo@ncechandi.ac.in</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                    <h4>Phone</h4>
+                    <p>+91 9876543210</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-cta">
+            <h3>Are you a Recruiter?</h3>
+            <p>Partner with Nalanda College of Engineering, Chandi for your next talent acquisition drive. Connect with top engineering talent across various branches.</p>
+            <button class="btn btn-primary" onclick="recruiterSignup()"><i class="fa-solid fa-handshake"></i> Register as Recruiter</button>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div>
+            <h3 style="color: white; margin-bottom: 0.5rem;">Nalanda College of Engineering, Chandi</h3>
+            <p style="font-size: 0.875rem;">Department of Science, Technology & Technical Education, Govt. of Bihar</p>
+        </div>
+        
+        <!-- Updated Official Social Handles -->
+        <div class="social-links">
+            <a href="https://www.linkedin.com/school/ncechandi/posts/?feedView=all" rel="noopener noreferrer" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://twitter.com/ncechandi" target="_blank" rel="noopener noreferrer" title="Twitter / X"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.facebook.com/NCEChandi/" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Nalanda College of Engineering, Chandi — Training & Placement Cell. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Modals -->
+
+<!-- 1. Login Choice Modal -->
+<div id="choiceModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Select Login Type</h3>
+            <button class="close-modal" onclick="closeChoice()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="modal-options">
+            <button class="option-btn" onclick="openModal('student')">
+                <span><i class="fa-solid fa-user-graduate"></i> Student Login</span>
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <button class="option-btn" onclick="openModal('recruiter')">
+                <span><i class="fa-solid fa-building"></i> Recruiter Login</span>
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <button class="option-btn" onclick="openModal('admin')">
+                <span><i class="fa-solid fa-user-gear"></i> Admin Login</span>
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- 2. Signup Select Modal -->
+<div id="signupModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Select Signup Type</h3>
+            <button class="close-modal" onclick="closeSignup()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="modal-options">
+            <button class="option-btn" onclick="studentSignup()">
+                <span><i class="fa-solid fa-user-graduate"></i> Student Registration</span>
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <button class="option-btn" onclick="recruiterSignup()">
+                <span><i class="fa-solid fa-building"></i> Recruiter Registration</span>
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- 3. Dynamic Form Inputs Modal -->
+<div id="inputModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 id="modalTitle">Admin Portal Login</h3>
+            <button class="close-modal" onclick="closeInputModal()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <form onsubmit="event.preventDefault(); closeInputModal();">
+            <div class="form-group">
+                <label>Admin Username / ID</label>
+                <input type="text" class="form-input" placeholder="Enter admin ID" required>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-input" placeholder="Enter password" required>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Log In</button>
+        </form>
+    </div>
+</div>
+
+<!-- JS Controls -->
+<script>
+function openChoice() {
+    document.getElementById("choiceModal").classList.add("active");
+}
+
+function closeChoice() {
+    document.getElementById("choiceModal").classList.remove("active");
+}
+
+function openSignup() {
+    document.getElementById("signupModal").classList.add("active");
+}
+
+function closeSignup() {
+    document.getElementById("signupModal").classList.remove("active");
+}
+
+function openModal(type) {
+    closeChoice();
+    
+    if(type === 'student') {
+        window.location.href = "student.html";
+        return;
+    }
+    if(type === 'recruiter') {
+        window.location.href = "recruiter.html";
+        return;
+    }
+    if(type === 'admin') {
+        document.getElementById("modalTitle").innerText = "Admin Portal Login";
+        document.getElementById("inputModal").classList.add("active");
+    }
+}
+
+function closeInputModal() {
+    document.getElementById("inputModal").classList.remove("active");
+}
+
+function studentSignup() {
+    window.location.href = "signup.html";
+}
+
+function recruiterSignup() {
+    window.location.href = "recruiter-signup.html";
+}
+
+// Global window overlay close click
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+        event.target.classList.remove('active');
+    }
+}
+</script>
+
+</body>
+</html>
